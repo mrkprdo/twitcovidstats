@@ -16,7 +16,7 @@ class TwitCovidStats:
     def tweetUpdate(self,message):
         dt = datetime.today().strftime('%Y-%m-%d-%H:%M:%S')
         source = 'https://api.apify.com/v2/key-value-stores/lFItbkoNDXKeSWBBA/records/LATEST?disableRedirect=true'
-        footer = 'This is an automated tweet.'
+        footer = 'I created this to monitor PH Covid Status while on #QuarantineLife'
         message = "{}\r\nas of {}\r\nSource: {}\r\n{}\r\nhttps://github.com/mrkprdo/twitcovidstats".format(message,dt,source,footer)
         post = self.api.PostUpdate(message)
 
